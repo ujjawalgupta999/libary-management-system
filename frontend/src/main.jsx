@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client';
 import App from './App.jsx';
 import axios from 'axios';
 
-// Automatically attach the token to all backend requests
 axios.interceptors.request.use((config) => {
   const token = localStorage.getItem('token');
   if (token) {

@@ -10,7 +10,7 @@ router.post('/request-borrow', auth, async (req, res) => {
   try {
     const { bookId } = req.body;
     
-    // 🔴 NEW: Account Freeze Logic
+    //Account Freeze Logic
     const overdueLoan = await Loan.findOne({ 
       userId: req.user.id, 
       status: 'borrowed',
@@ -76,7 +76,7 @@ router.post('/approve', auth, authorize('librarian', 'admin'), async (req, res) 
       loan.status = 'borrowed';
       loan.issueDate = Date.now();
       
-      // 🟢 NEW: Dynamic Loan Calculation
+      //  Dynamic Loan Calculation
       const periodDays = loan.bookId.loanPeriodDays || 14;
       loan.dueDate = new Date(Date.now() + periodDays * 24 * 60 * 60 * 1000); 
       await loan.save();

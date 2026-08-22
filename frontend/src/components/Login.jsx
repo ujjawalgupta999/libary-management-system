@@ -22,10 +22,10 @@ export default function Login() {
       } else if (userRole === 'librarian') {
         navigate('/approvals');
       } else {
-        navigate('/'); // Students go to the catalog
+        navigate('/'); 
       }
       
-      // We use reload to force the navbar state to update
+     
       window.location.reload(); 
     } catch (err) {
       setError(err.response?.data?.message || 'Login failed');
@@ -41,7 +41,7 @@ export default function Login() {
         <input type="password" placeholder="Password" required onChange={(e) => setFormData({ ...formData, password: e.target.value })} />
         <button type="submit" className="btn btn-primary">Login</button>
       </form>
-      {/* Note: I removed the 'Register here' link since admins create accounts now */}
+    
     </div>
   );
 }

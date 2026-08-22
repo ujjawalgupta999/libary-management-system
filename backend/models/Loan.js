@@ -26,5 +26,5 @@ const loanSchema = new mongoose.Schema({
   }
 });
 
-// CRITICAL: This line must be exactly this, exporting the compiled model
+
 module.exports = mongoose.model('Loan', loanSchema);

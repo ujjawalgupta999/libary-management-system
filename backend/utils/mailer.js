@@ -1,9 +1,6 @@
 const nodemailer = require('nodemailer');
 
-// 🚨 DEBUG: This will print the first 4 letters of your password to the console 
-// just to prove it is being loaded correctly. 
-console.log("MAILER CHECK - User:", process.env.EMAIL_USER);
-console.log("MAILER CHECK - Pass starts with:", process.env.EMAIL_PASS ? process.env.EMAIL_PASS.substring(0, 4) : "UNDEFINED!");
+
 
 const transporter = nodemailer.createTransport({
   service: 'gmail',

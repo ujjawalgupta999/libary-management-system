@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 export default function AddBook() {
   const [formData, setFormData] = useState({
-    title: '', author: '', isbn: '', availableCopies: 1, pdfUrl: '', loanPeriodDays: 14 // 🟢 Added state
+    title: '', author: '', isbn: '', availableCopies: 1, pdfUrl: '', loanPeriodDays: 14 
   });
   const [message, setMessage] = useState('');
   const navigate = useNavigate();

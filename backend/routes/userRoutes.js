@@ -4,7 +4,7 @@ const User = require('../models/User');
 const { auth, authorize } = require('../middleware/auth');
 const router = express.Router();
 
-// Admin Only: Create a new user (Student or Librarian)
+// Admin Only: Create a new user 
 router.post('/create', auth, authorize('admin'), async (req, res) => {
   try {
     const { name, email, password, role } = req.body;
