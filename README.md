@@ -1,6 +1,6 @@
 # Smart Library Management System
 
-Developed as a full-stack engineering portfolio piece at Zakir Husain College of Engineering & Technology (AMU), this application modernizes academic workflows. It bridges the gap between physical and digital inventory management, offering real-time tracking, automated alerts, and a seamless patron experience.
+it is an full-stack application . It bridges the gap between physical and digital inventory management, offering real-time tracking, automated alerts, and a seamless patron experience.
 
 ## Core Features
 
